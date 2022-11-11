@@ -3,7 +3,7 @@ using ShapesLibrary.Core.Shapes;
 
 namespace ShapesLibrary.Core
 {
-    public class ShapesFacade: IShapesFacade
+    public class ShapesFacade : IShapesFacade
     {
         public double GetCircleArea(double radius)
         {
@@ -21,6 +21,11 @@ namespace ShapesLibrary.Core
         {
             Triangle triangle = new Triangle(abSide, bcSide, acSide);
             return triangle.IsOrthogonal();
+        }
+
+        public double GetShapeArea(IShape shape)
+        {
+            return shape.GetArea();
         }
     }
 }

@@ -26,8 +26,14 @@
         [InlineData(6, 8, 10, 24)]
         public void GetAreaTest(double abSide, double bcSide, double acSide, double area)
         {
+            // arrange
             Triangle triangle = new Triangle(abSide, bcSide, acSide);
-            Assert.Equal(triangle.GetArea(), area);
+
+            // act
+            double result = triangle.GetArea();
+
+            // assert
+            Assert.Equal(result, area);
         }
 
 
@@ -36,8 +42,14 @@
         [InlineData(6, 8, 10)]
         public void IsOrthogonalTest(double abSide, double bcSide, double acSide)
         {
+            // arrange
             Triangle triangle = new Triangle(abSide, bcSide, acSide);
-            Assert.True(triangle.IsOrthogonal());
+
+            // act
+            bool result = triangle.IsOrthogonal();
+
+            // assert
+            Assert.True(result);
         }
 
         [Theory]
@@ -45,8 +57,14 @@
         [InlineData(13, 22, 15)]
         public void IsNotOrthogonalTest(double abSide, double bcSide, double acSide)
         {
+            // arrange
             Triangle triangle = new Triangle(abSide, bcSide, acSide);
-            Assert.False(triangle.IsOrthogonal());
+
+            // act
+            bool result = triangle.IsOrthogonal();
+
+            // assert
+            Assert.False(result);
         }
     }
 }

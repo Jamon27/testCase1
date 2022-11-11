@@ -15,8 +15,14 @@ namespace ShapesLibrary.Tests
         [InlineData(10, 100 * Math.PI)]
         public void GetAreaTest(double radius, double area)
         {
+            // arrange
             Circle circle = new Circle(radius);
-            Assert.Equal(circle.GetArea(), area);
+
+            // act
+            double result = circle.GetArea();
+
+            // assert
+            Assert.Equal(result, area);
         }
     }
 }

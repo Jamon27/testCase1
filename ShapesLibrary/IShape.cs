@@ -1,4 +1,4 @@
-﻿namespace ShapesLibrary
+﻿namespace ShapesLibrary.Core
 {
     internal interface IShape
     {

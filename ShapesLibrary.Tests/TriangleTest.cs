@@ -23,7 +23,7 @@
 
         [Theory]
         [InlineData(3, 4, 5, 6)]
-        [InlineData(6, 8, 10, 12)]
+        [InlineData(6, 8, 10, 24)]
         public void GetAreaTest(double abSide, double bcSide, double acSide, double area)
         {
             Triangle triangle = new Triangle(abSide, bcSide, acSide);

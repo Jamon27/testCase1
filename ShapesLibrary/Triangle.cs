@@ -56,7 +56,7 @@
             bool isOrthogonal = false;
             double longestSide = sides.Max();
 
-            if (sides.Select(x => x == longestSide).Count() > 1)
+            if (sides.Count(x=>x.Equals(longestSide)) > 1)
             {
                 isOrthogonal = false;
             }

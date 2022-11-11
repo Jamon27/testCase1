@@ -30,10 +30,32 @@
             return area;
         }
 
+        public bool IsOrthogonal()
+        {
+            return HasOrthogonalAngle(_abSide, _bcSide, _acSide);
+        }
+
         private double GetPerimeter(double ABSide, double BCSide, double ACSide)
         {
             double perimeter = ABSide + BCSide + ACSide;
             return perimeter;
+        }
+
+        private bool HasOrthogonalAngle(params double[] sides)
+        {
+            bool isOrthogonal = false;
+            double longestSide = sides.Max();
+
+            if (sides.Select(x => x == longestSide).Count() > 1)
+            {
+                isOrthogonal = false;
+            }
+            else
+            {
+                isOrthogonal = sides.Where(x => x != longestSide).Sum(x => Math.Pow(x, 2)) == Math.Pow(longestSide, 2);
+            }
+
+            return isOrthogonal;
         }
     }
 }

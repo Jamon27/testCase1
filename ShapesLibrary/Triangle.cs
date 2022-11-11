@@ -7,14 +7,24 @@
         private readonly double _acSide;
         public Triangle(double ABSide, double BCSide, double ACSide)
         {
-            if (ABSide <= 0 || BCSide <= 0 || ACSide <= 0)
+            if (ABSide <= 0)
             {
-                throw new ArgumentOutOfRangeException("Sides should have positive values!");
+                throw new ArgumentOutOfRangeException(nameof(ABSide), "Side of triangle must be positive value");
+            }
+
+            if (BCSide <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(BCSide), "Side of triangle must be positive value");
+            }
+
+            if (ACSide <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(ACSide), "Side of triangle must be positive value");
             }
 
             if (ABSide + BCSide < ACSide || BCSide + ACSide < ABSide || ABSide + ACSide < BCSide)
             {
-                throw new ArgumentOutOfRangeException("Can not create triangle! Please, check the sides length.");
+                throw new InvalidOperationException("Can not create triangle! Please, check the sides length.");
             }
 
             _abSide = ABSide;

@@ -1,6 +1,6 @@
 ﻿namespace ShapesLibrary.Core
 {
-    internal class Triangle : IShape
+    public class Triangle : IShape
     {
         private readonly double _abSide;
         private readonly double _bcSide;

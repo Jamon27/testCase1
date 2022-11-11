@@ -1,12 +1,12 @@
 ﻿namespace ShapesLibrary.Core
 {
-    internal class Circle : IShape
+    public class Circle : IShape
     {
         private readonly double _radius;
         public Circle(double radius)        {
             if (radius < 0)
             {
-                throw new ArgumentOutOfRangeException("Radius should be => 0!");
+                throw new ArgumentOutOfRangeException(nameof(radius), "Radius should be => 0!");
             }
 
             _radius = radius;

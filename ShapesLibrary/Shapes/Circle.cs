@@ -1,4 +1,6 @@
-﻿namespace ShapesLibrary.Core
+﻿using ShapesLibrary.Core.Interface;
+
+namespace ShapesLibrary.Core.Shapes
 {
     public class Circle : IShape
     {

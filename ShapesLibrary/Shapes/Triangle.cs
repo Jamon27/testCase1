@@ -1,4 +1,6 @@
-﻿namespace ShapesLibrary.Core
+﻿using ShapesLibrary.Core.Interface;
+
+namespace ShapesLibrary.Core.Shapes
 {
     public class Triangle : IShape
     {
@@ -56,7 +58,7 @@
             bool isOrthogonal = false;
             double longestSide = sides.Max();
 
-            if (sides.Count(x=>x.Equals(longestSide)) > 1)
+            if (sides.Count(x => x.Equals(longestSide)) > 1)
             {
                 isOrthogonal = false;
             }

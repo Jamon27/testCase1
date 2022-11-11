@@ -1,2 +1,2 @@
 global using Xunit;
-global using ShapesLibrary.Core;
+global using ShapesLibrary.Core.Shapes;

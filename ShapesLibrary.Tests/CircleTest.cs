@@ -1,5 +1,3 @@
-using ShapesLibrary.Core;
-
 namespace ShapesLibrary.Tests
 {
     public class CircleTest
